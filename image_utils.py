@@ -3,7 +3,7 @@ import numpy as np
 from scipy.signal import convolve2d
 
 def load_image(file_path):
-     try:
+ try:
     image = Image.open(file_path)
     image_array = np.array(image)
     return image_array
