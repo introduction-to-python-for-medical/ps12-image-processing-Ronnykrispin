@@ -10,7 +10,7 @@ import urllib.request
 import matplotlib.pyplot as plt
 from image_utils import load_image  # מייבאים את הפונקציה מקובץ image_utils.py
 
-url = "https://raw.githubusercontent.com/your_username/your_repo/main/image.jpg"  
+url = "https://raw.githubusercontent.com/introduction-to-python-for-medical/ps12-image-processing-Ronnykrispin/refs/heads/main/1024px-Python-logo-notext.svg_.png.webp"  
 file_path = "image.jpg"
 
 urllib.request.urlretrieve(url, file_path)
