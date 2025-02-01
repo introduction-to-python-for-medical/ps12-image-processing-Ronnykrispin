@@ -6,7 +6,26 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load the image
-image = load_image('/content/image.jpg')  # Replace with your image path
+import urllib.request
+import matplotlib.pyplot as plt
+from image_utils import load_image  # מייבאים את הפונקציה מקובץ image_utils.py
+
+url = "https://raw.githubusercontent.com/your_username/your_repo/main/image.jpg"  
+file_path = "image.jpg"
+
+urllib.request.urlretrieve(url, file_path)
+print("✔ התמונה נשמרה בהצלחה:", file_path)
+
+# 3. טעינת התמונה עם הפונקציה מ-image_utils.py
+image_array = load_image(file_path)
+
+# 4. הצגת התמונה
+plt.imshow(image_array)
+plt.axis("off")
+plt.show()
+
+# 5. בדיקת הצורה של התמונה
+print("📏 גודל התמונה:", image_array.shape)
 
 if image is not None:
     # Apply median filter for noise reduction
